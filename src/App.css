@@ -1,11 +1,4 @@
-/* footer */
-.footerP{
-    text-align: center;
-    padding: 100px 0;
-    font-size: small;
-    font-weight: bold;
-}
-/* Item Count */
+
 main{
     display: flex;
     justify-content: center;
@@ -13,74 +6,67 @@ main{
     margin-bottom: 20px;
 }
 .card{
-    width: 15rem;
+    width: 20rem;
     text-align: center;
     border-radius: 5px;
+}
+.detalleCard {
+    height: 400px;
 }
 .btnMasMenos{
     padding: 5px;
     font-weight: bold;
-    border-radius: 500px;
-    color: #fafafa;
-    width: 30px;
+    color: #81ace4;
+    width: 34px;
+    font-size: 15px;
 }
 .btnMasMenos:hover{
-    background-color: #0d6efd;
-    color: #fafafa;
-}
-.spanCantidad{
-    padding: 15px;
+    background-color: #e7e7e7;
+    color: #080ce4;
 }
 footer, nav{
-    background-color: #f0f0f0;
+    background-color: #b0d2ee;
+    font-family: 'Rampart One', cursive;
 }
-.ah5 {
-    color: black;
+.identification {
+    color: #183353;
     text-decoration: none;
 }
-.ah5:hover {
-    color: rgb(97, 97, 97);
+.identification:hover {
+    color: rgb(16, 8, 51);
 }
 body {
     margin: 0;
-    font-family: 'Urbanist', sans-serif;
+    font-family: 'Noto Sans Mono', monospace;
     letter-spacing: 1px;
-    font-weight: bold;
 }
-.imgNav {
-    padding: 0px;
-    margin: 0;
-    max-width: 60px;
+.logo {
+    max-width: 70px;
 }
-.nav-item{
+.navCategory{
     margin-right: 15px;
     margin-left: 15px;
 }
-.fotoCart{
-    max-width: 120px;
+.picture{
+    max-width: 150px;
 }
-.btn-danger{
-    padding: 1px 8px;
-}
+
 .card-img-top{
-    max-width: 300px;
+    max-width: 400px;
+    height: 300px;
 }
 .cartContainer{
     display: flex;
     justify-content: center;
     align-items: flex-start;
 }
-.labelCart{
-    border: #c2c2c2 solid 1px;
-    border-radius: 100px;
-    padding: 13px 10px 10px 10px;
-}
 .labelCart:hover{
     background-color: #82b4ff;
     border: #ffffff solid 1px;
+    border-radius: 50px;
+    padding: 13px 10px 10px 10px;
 }
 .carrito{
-    color: black;
     max-width: 30px;
     padding-right: 3px;
 }
@@ -90,33 +76,26 @@ body {
 label{
     font-weight: bold;
 }
-.imgDetail{
-    max-width: 300px;
+.imgStyle{
+    max-width: 600px;
+    max-height: 450px;
 }
 .linksIcons{
-    color: #333333;
+    color: #f5f6f7;
     font-size: xx-large;
     text-decoration: none;
 }
 .instagram:hover{
-    color: #833AB4;
+    color: #C13584;
 }
-.twitter:hover{
-    color: #1DA1F2;
-}
+
 .facebook:hover{
-    color: #3b5998;
+    color: #1778F2;
 }
 .whatsapp:hover{
-    color: #25D366;
+    color: #4AC959;
 }
-.ingA{
-    color: black;
-}
+
 .copyright{
-    font-size: small;
-}
-.footerTitle{
-    font-family: 'Alfa Slab One', cursive;
-    font-weight: normal;
+    font-size: x-small;
 }

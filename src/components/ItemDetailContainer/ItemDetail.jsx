@@ -16,10 +16,10 @@ const ItemDetail = ({producto}) => {
                     <div>
                         <Carousel variant="dark">
                             <Carousel.Item>
-                                <img className="imgDetail" src={producto.img} alt="First slide" />
+                                <img className="imgStyle" src={producto.img} alt="First slide" />
                             </Carousel.Item>
                             <Carousel.Item>
-                                <img className="imgDetail" src={producto.img} alt="Second slide" />
+                                <img className="imgStyle" src={producto.img2} alt="Second slide" />
                             </Carousel.Item>
                         </Carousel>
                     </div>
@@ -29,15 +29,15 @@ const ItemDetail = ({producto}) => {
                     </div>
                 </div>
             </div>
-            <div className="col-6">
+            <div className=" detalleCard text-center col-6">
                 <div className="card-body">
-                    <h5 className="card-title visually-hidden">{producto.id}</h5>
+                    <h3 className="card-title visually-hidden">{producto.id}</h3>
                     <h2 className="card-text text-uppercase fs-5"><b>{producto.name}</b></h2>
-                    <h6 className="card-text mt-3"><b>PRECIO: </b>$ {producto.unitPrice}</h6>
+                    <h6 className="card-text mt-3"><b>Precio: </b>$ {producto.unitPrice}</h6>
                     <br />
                     <p className="textDetail">{producto.description}</p>
                     <div>
-                        <h6>Porciones:</h6>
+                        <h6>Sabores:</h6>
                         <select>
                             <option>{producto.cantidad1}</option>
                             <option>{producto.cantidad2}</option>

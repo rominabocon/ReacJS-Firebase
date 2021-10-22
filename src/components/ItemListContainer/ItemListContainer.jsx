@@ -38,15 +38,8 @@ const ItemListContainer = () => {
     if(productos.length === 0){
         return (
             <div className="text-center m-5">
-                <Spinner className="m-3" animation="grow" size="sm" />
-                <Spinner className="m-3" animation="grow" />
-                <Spinner className="m-3" animation="grow" size="sm" />
-                <Spinner className="m-3" animation="grow" />
-                <Spinner className="m-3" animation="grow" size="sm" />
-                <Spinner className="m-3" animation="grow" />
-                <Spinner className="m-3" animation="grow" size="sm" />
-                <Spinner className="m-3" animation="grow" />
-                <Spinner className="m-3" animation="grow" size="sm" />
+                <Spinner className="m-3" animation="border" variant="info"/>
+
             </div>
         )       
     }else{
