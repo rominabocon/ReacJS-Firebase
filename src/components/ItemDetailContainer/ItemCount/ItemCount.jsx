@@ -22,9 +22,9 @@ const ItemCount = ({stock, initial, paramOnAdd}) => {
         <>
         <div>
             <div className="d-flex justify-content-center m-3 align-items-center">
-                <Button className="btnMasMenos" onClick={handleRestar}>-</Button> 
+                <Button className="handle" onClick={handleRestar}>-</Button> 
                 <p className="m-2">{counter}</p> 
-                <Button className="btnMasMenos" onClick={handleSumar}>+</Button> <br />
+                <Button className="hanlde" onClick={handleSumar}>+</Button> <br />
             </div>    
             <Button variant="primary" onClick={()=>paramOnAdd(counter)}>Agregar al carrito</Button>
         </div>

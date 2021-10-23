@@ -44,7 +44,7 @@ const ItemListContainer = () => {
         )       
     }else{
         return(
-        <div className="container">
+        <div className=" container">
             <ItemList productos={productos} />
         </div>
         )

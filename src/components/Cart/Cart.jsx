@@ -63,7 +63,6 @@ const Cart = () => {
                 <tr>
                     <th scope="col">Nombre</th>
                     <th scope="col">Categoria</th>
-                    <th scope="col">Sabor</th>
                     <th scope="col">Cantidad</th>
                     <th scope="col">Precio Unitario</th>
                     <th scope="col">Precio Final</th>
@@ -80,7 +79,6 @@ const Cart = () => {
                 <tr>
                     <th scope="row">{producto.name}</th>
                     <td>{producto.category}</td>
-                    <td>{producto.cantidad1}</td>
                     <td>{producto.quantity}{producto.key}</td>
                     <td>${producto.unitPrice}</td>
                     <td>${total}</td>
@@ -95,41 +93,41 @@ const Cart = () => {
                     </>                                
             )})}
             </table>
-            <h3 className="text-end me-5 fs-1">Total: $ {listaDeTotales.reduce((previous, next) => previous + next)}</h3> 
-            <Link to={"/"} className="btn btn-secondary m-3">Volver al Inicio</Link>
-            <Button variant="btn btn-success m-3" onClick={handleTraer}>Confirmar Compra</Button>
+            <h3 className="total text-end me-5 fs-1">Total: $ {listaDeTotales.reduce((previous, next) => previous + next)}</h3> 
+            <Link to={"/"} className="btn btn-secondary fs-5 m-3">Volver al Inicio</Link>
+            <Button variant="btn fs-5 btn-success m-3" onClick={handleTraer}>Confirmar Compra</Button>
             
 
           <Modal show={traerFormulario} onHide={handleCancelar}>
             <Modal.Header>
-              <Modal.Title className="fs-3 text-center">¡Sólo un paso más!</Modal.Title>
+              <Modal.Title className="fs-3 text-center">¡Ya casi estamos!</Modal.Title>
             </Modal.Header>
             <Modal.Body>
               <Form>
                 <div className="mb-4">
-                  <Form.Label>Nombre y Apellido</Form.Label>
-                  <Form.Control type="text" placeholder="Ej: Juan Carlos" className="form-control" {...register("name", {required: "Dato necesario para continuar" })} />
+                  <Form.Label>Nombre completo</Form.Label>
+                  <Form.Control type="text" placeholder="Nombre y Apellido" className="form-control" {...register("name", {required: "Uy! Te olvidaste..." })} />
                   {errors.name && <p className="text-danger d-block">{errors.name.message}</p>}
                 </div>
                 <div className="mb-4">
-                  <Form.Label>Teléfono</Form.Label>
-                  <Form.Control type="phone" className="form-control" placeholder="Ej: 11 0000 0000" {...register("phone", {required: "Dato necesario para continuar" })} />
+                  <Form.Label>Celular</Form.Label>
+                  <Form.Control type="phone" className="form-control" placeholder="15 1719 1917" {...register("phone", {required: "Uy! Te olvidaste..." })} />
                   {errors.phone && <p className="text-danger d-block">{errors.phone.message}</p>}
                 </div>
                 <div className="mb-4">
-                  <Form.Label>Email</Form.Label>
-                  <Form.Control type="email" className="form-control" placeholder="Ej: juancarlos@gmail.com" aria-describedby="emailHelp" {...register("email", {required: "Dato necesario para continuar" })} />
+                  <Form.Label>Correo electrónico</Form.Label>
+                  <Form.Control type="email" className="form-control" placeholder="tucorreo@electronico.com" aria-describedby="emailHelp" {...register("email", {required: "Dato necesario para continuar" })} />
                   {errors.email && <p className="text-danger d-block">{errors.email.message}</p>}
                 </div>
               </Form>
             </Modal.Body>
             <Modal.Footer>
-              <Button onClick={handleCancelar}>Cancelar</Button>
+              <Button onClick={handleCancelar}>Volver</Button>
               <Button variant="success" onClick={handleSubmit((data, e)=> {
                 handleCancelar()
                 crearOrden(data.name, data.phone, data.email)
                 setOrdenConfirmada(true)
-                })}>Finalizar Compra
+                })}>Completar
               </Button>
             </Modal.Footer>
           </Modal>
@@ -137,7 +135,7 @@ const Cart = () => {
             <Modal.Header closeButton onClick={()=> {
               clearCart()
               history.push("/")}}>
-              <Alert variant="success" className="text-center d-flex justify-content-center">¡Compra exitosa!</Alert>
+              <Alert variant="success" className="text-center d-flex justify-content-center">¡Tu compra se realizo con exito!</Alert>
             </Modal.Header>
             <Modal.Body>
               <p className="text-center"><b>N° de Orden:</b> {ordenID}</p> <br />

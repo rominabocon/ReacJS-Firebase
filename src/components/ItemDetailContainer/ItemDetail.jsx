@@ -9,8 +9,8 @@ const ItemDetail = ({producto}) => {
 
     return (
     <>
-        <div producto-aos="fade-up" producto-aos-duration="3000"
-            className="container d-flex justify-content-end m-auto align-items-center row mb-5">
+        <div data-aos="zoom-in-up" data-aos-duration="1700"
+            className="container d-flex justify-content-end m-auto align-items-center row mt-5">
             <div className="text-center col-6">
                 <div className="d-block">
                     <div>
@@ -25,7 +25,7 @@ const ItemDetail = ({producto}) => {
                     </div>
                     <div>
                         <ItemCount initial={1} stock={producto.stock} paramOnAdd={onAdd} />
-                        <Link to="/"><Button variant="dark m-3">Volver al Inicio</Button></Link>
+
                     </div>
                 </div>
             </div>
@@ -44,6 +44,8 @@ const ItemDetail = ({producto}) => {
                         </select>
                     </div>
                 </div>
+                <Link to="/Cart"><Button variant="danger m-3">Ir al Carrito</Button></Link>
+                <Link to="/Productos"><Button variant="dark m-3">Volver a Productos</Button></Link>
             </div>
         </div>
     </>
